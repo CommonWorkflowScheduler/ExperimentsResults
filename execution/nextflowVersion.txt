@@ -1,0 +1,1 @@
+commonworkflowscheduler/nextflow:latest

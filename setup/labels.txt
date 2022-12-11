@@ -1,0 +1,3 @@
+#CPU
+kubectl label nodes cpu05 node8 cpu14 node1 node10 cws_experiment=true
+kubectl label nodes node2 cws_scheduler=true

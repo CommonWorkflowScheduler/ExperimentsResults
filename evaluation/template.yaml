@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: workflow-prepare
+  namespace: user
+spec:
+  selector:
+    matchLabels:
+      name: workflow-prepare
+  template:
+    metadata:
+      labels:
+        name: workflow-prepare
+    spec:
+      initContainers:
+      - name: i1
+        image: ubuntu
+      containers:
+      - name: c1
+        image: ubuntu
+        command: 
+        - /bin/bash
+        - "-c"
+        - "sleep infinity"
+      nodeSelector: 
+        cwsexperiment: 'true'
